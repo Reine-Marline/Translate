@@ -11,7 +11,7 @@ class Event(models.Model):
 
 
 class Language(models.Model):
-    code = models.CharField(max_length=10, unique=True)  # ex: 'fr', 'en', 'sw'
+    code = models.CharField(max_length=10, unique=True)  # ex: 'ki', 'fr', 'en', 'sw'
     name = models.CharField(max_length=50)
 
     def __str__(self):

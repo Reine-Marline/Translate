@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interpretation Live - Visiteur</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <a class="back-link" href="/">← Retour</a>
+      <h1>Mode Visiteur</h1>
+
+      <section class="card">
+        <label for="languageSelect">Langue</label>
+        <select id="languageSelect">
+          <option value="fr">Francais</option>
+          <option value="en">Anglais</option>
+          <option value="sw">Swahili</option>
+          <option value="ki">Kinyarwanda</option>
+        </select>
+
+        <div class="actions-row">
+          <button id="joinBtn" class="button button-primary">Ecouter</button>
+          <button id="leaveBtn" class="button" disabled>Quitter</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Statut</h2>
+        <div id="statusBanner" class="banner banner-info">Hors ligne.</div>
+        <ul class="status-list">
+          <li><strong>Langue:</strong> <span id="currentLanguage">-</span></li>
+          <li><strong>Interprete:</strong> <span id="interpreterState">Non connecte</span></li>
+          <li><strong>Auditeurs actifs:</strong> <span id="listenersCount">0</span></li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Audio Live</h2>
+        <audio id="liveAudio" controls autoplay playsinline webkit-playsinline></audio>
+        <p class="subtitle">Sur mobile, cliquez d'abord sur Ecouter pour autoriser la lecture.</p>
+      </section>
+
+      <footer class="site-footer">Copyright © DevImpact. Tous droits reserves.</footer>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/listener.js"></script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.env
+venv/
+
+# Django
+db.sqlite3
+
+# Node / Frontend
+node_modules/
+dist/
+build/
+.env.local
+
+# Logs
+*.log
