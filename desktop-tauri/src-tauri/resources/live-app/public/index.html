@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interpretation Live - Accueil</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Interpretation Audio Live</h1>
+      <p class="subtitle">Choisissez votre role pour acceder a la diffusion locale.</p>
+
+      <section class="card role-grid">
+        <a class="button button-primary" href="/interpreter.html">Interprete</a>
+        <a class="button button-secondary" href="/listener.html">Visiteur</a>
+      </section>
+
+      <section class="card notice">
+        <p>
+          Utilisez ce systeme sur le meme reseau Wi-Fi local en HTTPS.
+          URL de connexion:
+          <code>https://&lt;IP-SERVEUR&gt;:3000</code>
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>QR Codes Rapides</h2>
+        <p class="subtitle">Scannez selon votre role pour ouvrir directement la bonne page.</p>
+        <div class="role-grid">
+          <div>
+            <h3>QR Interprete</h3>
+            <img src="/api/qr/interpreter" alt="QR Interprete" style="width: 100%; max-width: 240px" />
+            <p><a href="/interpreter.html">https://.../interpreter.html</a></p>
+          </div>
+          <div>
+            <h3>QR Auditeur</h3>
+            <img src="/api/qr/listener" alt="QR Auditeur" style="width: 100%; max-width: 240px" />
+            <p><a href="/listener.html">https://.../listener.html</a></p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer">Copyright © DevImpact. Tous droits reserves.</footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interpretation Live - Interprete</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <!-- <a class="back-link" href="/">← Retour</a> -->
+      <h1>Mode Interprete</h1>
+
+      <section class="card">
+        <label for="languageSelect">Langue</label>
+        <select id="languageSelect">
+          <option value="fr">Francais</option>
+          <option value="en">Anglais</option>
+          <option value="sw">Swahili</option>
+          <option value="ki">Kirundi</option>
+        </select>
+
+        <div class="actions-row">
+          <button id="joinBtn" class="button button-primary">Se connecter</button>
+          <button id="startMicBtn" class="button" disabled>Demarrer micro</button>
+          <button id="stopMicBtn" class="button button-danger" disabled>Arreter micro</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Statut</h2>
+        <div id="statusBanner" class="banner banner-info">Hors ligne.</div>
+        <ul class="status-list">
+          <li><strong>Langue:</strong> <span id="currentLanguage">-</span></li>
+          <li><strong>Auditeurs:</strong> <span id="listenersCount">0</span></li>
+          <li><strong>En attente:</strong> <span id="waitingCount">0</span></li>
+          <li><strong>Flux:</strong> <span id="streamState">Arrete</span></li>
+        </ul>
+      </section>
+
+      <footer class="site-footer">Copyright © DevImpact. Tous droits reserves.</footer>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/interpreter.js"></script>
+  </body>
+</html>
